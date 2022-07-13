@@ -1,0 +1,73 @@
+﻿@model List<Portfolyo>
+@{
+    string elemanblg = GenelAraclarBLL.ElemanBilgisi(ViewBag.Count);
+}
+<script>
+    $(function () {
+        $("#spnElemanBilgisi").html("@(elemanblg)");
+    });
+</script>
+<table class="table table-hover table-active">
+    <thead class="table table-active">
+        <tr>
+            <th>
+                #
+            </th>
+            <th>
+                <input type="checkbox" id="cbTumu" />
+            </th>
+            <th>
+                <a href="~/yonet/portfolyo@(GenelAraclarBLL.SortLink("Adi"))">
+                    <i class="mdi mdi-chevron-up"></i>
+                    Adı
+                    <i class="mdi mdi-chevron-down"></i>
+                </a>
+            </th>
+            @*<th>
+                Durumu
+            </th>*@
+            <th>
+                Görsel
+            </th>
+            <th>
+                Açıklama
+            </th>
+            <th>
+                Detay
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @item.Id
+            </td>
+            <th>
+                <input type="checkbox" class="cbTek" name="cbTek" value="@item.Id" />
+            </th>
+            <td>
+                @item.Adi
+            </td>
+            @*<td>
+                @Html.Raw(Sabitler.DURUMUhtml(item.Durumu.Value))
+            </td>*@
+            <td>
+                <a target="_blank" href="~/yonet/images/portfolyo/@item.Gorsel">
+                    <img src="~/yonet/images/portfolyo/@item.Gorsel" alt="" />
+                </a>
+            </td>
+            <th>
+                @item.Aciklama
+            </th>
+            <td>
+                <a href="~/yonet/portfolyo/detay/@item.Id">
+                    <i class="mdi mdi-library-plus"></i>
+                </a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+@Html.Raw(GenelAraclarBLL.SayfalamaYap("Portfolyo", ViewBag.Count))

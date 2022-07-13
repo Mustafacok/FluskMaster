@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0f724f0034694d9684a5dd117944d209" Name="Diagram1" ZoomLevel="104" >
+        <EntityTypeShape EntityType="FluskMasterUpdateModel.Blogs" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="FluskMasterUpdateModel.Iletisim" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="FluskMasterUpdateModel.Portfolyo" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="FluskMasterUpdateModel.Referans" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="FluskMasterUpdateModel.Slider" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="FluskMasterUpdateModel.Uye" Width="1.5" PointX="4.75" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

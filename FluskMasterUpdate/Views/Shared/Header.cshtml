@@ -1,0 +1,69 @@
+﻿@*
+    db deki table ile aktif hale getirebiliriz.
+    @{
+    SliderBLL _slider = new SliderBLL();
+    var liste4 = _slider.Get(Size: 10);
+}*@
+
+    <div id="drawer-right">
+        <div class="cross text-right">
+            <a class="toggleDrawer" href="#"><i class="fa fa-times-circle fa-2x"></i></a>
+        </div>
+        <h2>Menüler</h2>
+        <nav>
+            <ul class="nav nav-pills nav-stacked">
+                <li>
+                    <a href="~/"><i class="fa fa-home"></i> Anasayfa</a>
+                </li>
+                <li>
+                    <a href="~/Portfolyo"><i class="fa fa-bookmark"></i> Porfolyo</a>
+                </li>
+                <li>
+                    <a href="~/Servisler"><i class="fa fa-tasks"></i> Servisler</a>
+                </li>
+
+                <li>
+                    <a href="~/Blogs"><i class="fa fa-wordpress"></i> Blog</a>
+                </li>
+                <li>
+                    <a href="~/Iletisim"><i class="fa fa-phone-square"></i> İletişim</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="social">
+            <h2>Sosyal Medya</h2>
+            <ul>
+                <li><a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a></li>
+                <li><a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter-square fa-3x"></i></a></li>
+                <li><a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin-square fa-3x"></i></a></li>
+                <li><a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram fa-3x"></i></a></li>
+            </ul>
+        </div>
+    </div><!-- #drawer-right -->
+    <div id="wrapper">
+        <div id="header" class="content-block header-wrapper">
+            <div class="header-wrapper-inner">
+                <section class="top clearfix">
+                    <div class="pull-left">
+                        <h1><a class="logo" href="~/">Flusk</a></h1>
+                    </div>
+                    <div class="pull-right">
+                        <a class="toggleDrawer" href="#"><i class="fa fa-bars fa-2x"></i></a>
+                    </div>
+                </section>                
+                <section class="center">                   
+                    <div class="slogan">
+                        DOĞA &amp; YAŞAM
+                    </div>
+                    <div class="secondary-slogan">
+                        Doğa, görülebilen düşüncedir.(E.Crabbe)
+                    </div>                    
+                </section>
+                <section class="bottom">
+                    <a id="scrollToContent" href="~/">
+                        <img src="~/assets/images/arrow_down.png">
+                    </a>
+                </section>
+            </div>
+        </div><!-- header -->
+    </div>

@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "FluskMaster | Referanslar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ReferansBLL _referans = new ReferansBLL();
+    var liste3 = _referans.Get(Size: 10);
+}
+
+<    <div class="content-block" id="testimonials">
+    <div class="container">
+        <header class="block-heading cleafix">
+            <h1>Referanslar</h1>
+            <p>Müşterilerimizin görüşleri.</p>
+        </header>
+        <section class="block-body">
+            <div class="row">
+
+                @foreach (var item in liste3)
+                {
+                        <div class="testimonial">
+                            <img src="~/assets/images/@item.Gorsel">
+                            <p>@item.Aciklama</p>
+                            <strong>@item.AdiSoyadi</strong><br />
+                            <span>@item.Sirketi</span>
+                        </div>
+                }
+
+            </div>
+        </section>
+    </div>
+</div>
+

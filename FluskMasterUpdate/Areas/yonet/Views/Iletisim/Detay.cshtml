@@ -1,0 +1,37 @@
+﻿@model Iletisim
+@{
+    ViewBag.Title = "İletişim - Detay";
+    Layout = "~/Areas/yonet/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">İletişim</h4>
+                <p class="card-description">
+                    Detay
+                </p>
+                @Html.Raw(ViewBag.Mesaj)
+                <form class="forms-sample" role="form" method="post">
+                    <div class="form-group">
+                        <label for="exampleInputUsername1">Adı</label>
+                        <input required value="@Model.Adi" name="Adi" type="text" class="form-control" id="exampleInputUsername1" placeholder="İletişim Adı">
+
+                        <label for="exampleInputUsername2">Email</label>
+                        <input required value="@Model.Email" name="Email" type="text" class="form-control" id="exampleInputUsername1" placeholder="İletişim Email">
+
+                        <label for="exampleInputUsername2">Açıklama</label>
+                        <input required value="@Model.Aciklama" name="Aciklama" type="text" class="form-control" id="exampleInputUsername1" placeholder="İletişim Açıklama">
+                    </div>
+                    <button type="submit" class="btn-xs btn btn-primary mr-2"><i class=" mdi mdi-content-save">Kaydet</i></button>
+                    <a href="~/yonet/iletisim" class="btn-xs btn btn-light">
+                        <i class="mdi mdi-undo">
+                            Vazgeç
+                        </i>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

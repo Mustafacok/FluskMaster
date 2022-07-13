@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "FluskMasterUpdate | Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    BlogsBLL _blogs = new BlogsBLL();
+    var liste2 = _blogs.Get(Size: 10);
+}
+
+<div id="wrapper">
+    <div class="content-block" id="blog">
+        <div class="container">
+            <header class="block-heading cleafix">
+                <a href="#" class="btn btn-o btn-lg pull-right">Tümünü Gör</a>
+                <h1>Blog</h1>
+                <p>En son gelişmelerden haberdar olun.</p>
+            </header>
+            <section class="block-body">
+                <div class="row">
+                    @foreach (var item in liste2)
+                    {
+                    <div class="col-sm-4 blog-post">
+                        <img src="~/assets/images/@item.Gorsel">
+                        <a href="~/assets/images/@item.Gorsel"><h2>@item.Adi</h2></a>
+                        <div class="date">@item.Tarihi</div>
+                        <p>@item.Icerik</p>
+                        <a href="">Daha Fazla</a>
+                    </div>
+                    }
+                </div>
+            </section>
+        </div>
+    </div><!-- #blog -->
+</div>

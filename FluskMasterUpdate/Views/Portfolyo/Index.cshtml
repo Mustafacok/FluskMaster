@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "FluskMasterUpdate | Portfolyo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    PortfolyoBLL _portfolyo = new PortfolyoBLL();
+    var liste = _portfolyo.Get(Size:10);
+}
+
+<div class="content-block" id="portfolio">
+    <div class="container">
+        <header class="block-heading cleafix">
+            <a href="#" class="btn btn-o btn-lg pull-right">Tümünü Gör</a>
+            <h1>Portfolyo</h1>
+            <p>Portfolyomuza göz atın.</p>
+        </header>
+        <section class="block-body">
+            <div class="row">
+                @foreach (var item in liste)
+                {
+                <div class="col-sm-4">
+                    <a href="assets/images/@item.Gorsel" class="recent-work" style="background-image: url(assets/images/@item.Gorsel)">
+                        <span class="btn btn-o-white">@item.Adi</span>
+                    </a>
+                </div>
+                }
+            </div>
+        </section>
+    </div>
+</div><!-- #portfolio -->
